@@ -43,3 +43,4 @@ aux_links:
     - "https://github.com/BespokeSynth/BespokeSynth"
 
 color_scheme: dark
+theme: jekyll-theme-midnight
