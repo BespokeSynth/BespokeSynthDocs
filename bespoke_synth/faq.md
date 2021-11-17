@@ -68,22 +68,6 @@ Some of the actions rely on using keyboard, there is no menu item for every acti
 
 ## manage VST plugins
 
-- set your `vstsearchdir` (in config) to directory where you have limited amout of VSTs which you want to use with Bespoke
-
-or (on Windows)
-
-use [BespokePluginScanner](https://www.bespokesynth.com/builds/BespokePluginScanner.exe):
-
-> this is a separate app (an example juce app that I ripped pieces out of) that can scan for VSTs better than bespoke can, and then export the scanned list into bespoke 
-> to use it:
-> 
-> - close bespoke
-> - run this app
-> - go to Options->Edit the List of Available Plug-ins...
-> - click the Options... button below to initiate the scans
-> - edit the list to however you would like it (you can remove plugins you don't care about, for example)
-> - close that window, then in the main window, go to Options->Export plugins list to Bespoke
-> - now open bespoke, and you should (hopefully) be all set, with all scanned VSTs accessible! 
-if this band-aid works, then I will integrate a nicer version of this process into bespoke 1.0.1
+- choose 'manage VSTs...' from the 'vst plugins' dropdown in the title bar
 
 
