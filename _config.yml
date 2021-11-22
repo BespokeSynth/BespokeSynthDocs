@@ -16,7 +16,7 @@
 title: Bespoke Synth User Docs
 description: >- # this means to ignore newlines until "baseurl:"
   Community-built documentation for bespoke synth.
-baseurl: "BespokeSynthDocs"
+baseurl: "/BespokeSynthDocs"
 url: "https://bespokesynth.github.io"
 # Build settings
 markdown: kramdown
