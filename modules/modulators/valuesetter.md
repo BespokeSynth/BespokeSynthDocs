@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/valuesetter.md %}
+{% include autodocs/modules/modulators/valuesetter.md %}

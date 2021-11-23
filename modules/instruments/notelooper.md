@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/notelooper.md %}
+{% include autodocs/modules/instruments/notelooper.md %}

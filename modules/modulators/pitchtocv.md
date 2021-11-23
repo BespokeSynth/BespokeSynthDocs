@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/pitchtocv.md %}
+{% include autodocs/modules/modulators/pitchtocv.md %}

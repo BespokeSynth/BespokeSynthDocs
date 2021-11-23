@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/notecanvas.md %}
+{% include autodocs/modules/instruments/notecanvas.md %}

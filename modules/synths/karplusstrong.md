@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/karplusstrong.md %}
+{% include autodocs/modules/synths/karplusstrong.md %}

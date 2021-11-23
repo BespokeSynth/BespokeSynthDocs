@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/comment.md %}
+{% include autodocs/modules/other/comment.md %}

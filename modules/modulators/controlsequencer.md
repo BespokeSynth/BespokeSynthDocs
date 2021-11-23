@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/controlsequencer.md %}
+{% include autodocs/modules/modulators/controlsequencer.md %}

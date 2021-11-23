@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/radiosequencer.md %}
+{% include autodocs/modules/other/radiosequencer.md %}

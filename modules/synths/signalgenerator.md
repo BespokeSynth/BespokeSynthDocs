@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/signalgenerator.md %}
+{% include autodocs/modules/synths/signalgenerator.md %}

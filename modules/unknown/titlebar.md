@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include modules/unknown/titlebar.md %}
+{% include autodocs/modules/unknown/titlebar.md %}

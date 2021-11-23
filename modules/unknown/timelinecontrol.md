@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include modules/unknown/timelinecontrol.md %}
+{% include autodocs/modules/unknown/timelinecontrol.md %}

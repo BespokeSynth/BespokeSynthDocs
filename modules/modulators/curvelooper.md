@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/curvelooper.md %}
+{% include autodocs/modules/modulators/curvelooper.md %}

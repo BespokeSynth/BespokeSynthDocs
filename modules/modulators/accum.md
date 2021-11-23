@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/accum.md %}
+{% include autodocs/modules/modulators/accum.md %}

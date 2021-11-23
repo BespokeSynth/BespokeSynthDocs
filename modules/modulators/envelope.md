@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/envelope.md %}
+{% include autodocs/modules/modulators/envelope.md %}

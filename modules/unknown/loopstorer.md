@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include modules/unknown/loopstorer.md %}
+{% include autodocs/modules/unknown/loopstorer.md %}

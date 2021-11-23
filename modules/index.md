@@ -8,4 +8,4 @@ has_toc: false
 
 # modules
 
-{% include modules.md %}
+{% include autodocs/modules.md %}

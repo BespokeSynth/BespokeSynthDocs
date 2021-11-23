@@ -1,8 +1,7 @@
 ---
 layout: page
 title: terminology
-parent: bespoke synth
-nav_order: 2
+parent: home
 ---
 
 # terminology

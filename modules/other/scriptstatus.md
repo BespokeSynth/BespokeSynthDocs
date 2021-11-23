@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/scriptstatus.md %}
+{% include autodocs/modules/other/scriptstatus.md %}

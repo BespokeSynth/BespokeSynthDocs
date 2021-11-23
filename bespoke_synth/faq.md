@@ -1,8 +1,7 @@
 ---
 layout: page
 title: faq
-parent: bespoke synth
-nav_order: 3
+parent: home
 ---
 
 # frequently asked questions

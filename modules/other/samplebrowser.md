@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/samplebrowser.md %}
+{% include autodocs/modules/other/samplebrowser.md %}

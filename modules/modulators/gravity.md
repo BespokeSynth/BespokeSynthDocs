@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/gravity.md %}
+{% include autodocs/modules/modulators/gravity.md %}

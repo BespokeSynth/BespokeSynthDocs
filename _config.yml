@@ -21,8 +21,14 @@ url: "https://bespokesynth.github.io"
 # Build settings
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
+color_scheme: dark
 plugins:
   - jekyll-feed
+aux_links:
+  "bespokesynth.com":
+    - "https://www.bespokesynth.com/"
+  "github.com":
+    - "https://github.com/BespokeSynth/BespokeSynth"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -35,12 +41,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-aux_links:
-  "bespokesynth.com":
-    - "https://www.bespokesynth.com/"
-  "github.com":
-    - "https://github.com/BespokeSynth/BespokeSynth"
-
-color_scheme: dark
-theme: jekyll-theme-midnight

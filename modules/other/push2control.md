@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/push2control.md %}
+{% include autodocs/modules/other/push2control.md %}

@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/randomnote.md %}
+{% include autodocs/modules/instruments/randomnote.md %}

@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/grid.md %}
+{% include autodocs/modules/other/grid.md %}

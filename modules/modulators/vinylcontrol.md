@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/vinylcontrol.md %}
+{% include autodocs/modules/modulators/vinylcontrol.md %}

@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/drumplayer.md %}
+{% include autodocs/modules/synths/drumplayer.md %}

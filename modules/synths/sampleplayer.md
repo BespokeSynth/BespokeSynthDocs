@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/sampleplayer.md %}
+{% include autodocs/modules/synths/sampleplayer.md %}

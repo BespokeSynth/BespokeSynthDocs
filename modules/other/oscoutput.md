@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/oscoutput.md %}
+{% include autodocs/modules/other/oscoutput.md %}

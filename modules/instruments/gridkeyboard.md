@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/gridkeyboard.md %}
+{% include autodocs/modules/instruments/gridkeyboard.md %}

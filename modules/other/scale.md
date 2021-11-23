@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/scale.md %}
+{% include autodocs/modules/other/scale.md %}

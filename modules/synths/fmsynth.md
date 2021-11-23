@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/fmsynth.md %}
+{% include autodocs/modules/synths/fmsynth.md %}

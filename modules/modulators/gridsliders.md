@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/gridsliders.md %}
+{% include autodocs/modules/modulators/gridsliders.md %}

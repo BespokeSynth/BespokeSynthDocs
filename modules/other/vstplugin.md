@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/vstplugin.md %}
+{% include autodocs/modules/other/vstplugin.md %}

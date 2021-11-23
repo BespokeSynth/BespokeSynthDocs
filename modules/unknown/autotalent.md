@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include modules/unknown/autotalent.md %}
+{% include autodocs/modules/unknown/autotalent.md %}

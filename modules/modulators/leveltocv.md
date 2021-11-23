@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/leveltocv.md %}
+{% include autodocs/modules/modulators/leveltocv.md %}

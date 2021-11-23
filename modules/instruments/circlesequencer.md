@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/circlesequencer.md %}
+{% include autodocs/modules/instruments/circlesequencer.md %}

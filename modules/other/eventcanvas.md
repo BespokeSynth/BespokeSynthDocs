@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/eventcanvas.md %}
+{% include autodocs/modules/other/eventcanvas.md %}

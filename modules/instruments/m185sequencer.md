@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/m185sequencer.md %}
+{% include autodocs/modules/instruments/m185sequencer.md %}

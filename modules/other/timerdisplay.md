@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/timerdisplay.md %}
+{% include autodocs/modules/other/timerdisplay.md %}

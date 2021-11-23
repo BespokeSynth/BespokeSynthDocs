@@ -5,4 +5,4 @@ parent: synths
 grand_parent: modules
 ---
 
-{% include modules/synths/oscillator.md %}
+{% include autodocs/modules/synths/oscillator.md %}

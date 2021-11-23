@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include modules/other/selector.md %}
+{% include autodocs/modules/other/selector.md %}

@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include modules/modulators/modwheeltocv.md %}
+{% include autodocs/modules/modulators/modwheeltocv.md %}

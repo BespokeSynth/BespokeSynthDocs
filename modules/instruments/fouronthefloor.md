@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/fouronthefloor.md %}
+{% include autodocs/modules/instruments/fouronthefloor.md %}

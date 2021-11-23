@@ -5,4 +5,4 @@ parent: instruments
 grand_parent: modules
 ---
 
-{% include modules/instruments/midicontroller.md %}
+{% include autodocs/modules/instruments/midicontroller.md %}
