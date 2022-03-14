@@ -18,13 +18,15 @@ Download Ruby:
 
 - [Ruby](https://www.ruby-lang.org/en/downloads/)
 
-Once you have installed Ruby, install the bundler gem:
+Once you have installed Ruby, install the bundler gem globally or locally:
+
+Global:
 
 ```
 gem install bundler
 ```
 
-Or if you prefer a user install of bundler:
+Local:
 
 ```
 gem install --user-install bundler
@@ -42,4 +44,8 @@ Then you can install the bundle by running this command in the main repo folder:
 bundle install
 ```
 
-Finally, run ```bundle exec jekyll serve --b ''``` to serve the site at http://127.0.0.1:4000
+To serve the site at http://127.0.0.1:4000
+
+```
+bundle exec jekyll serve --b ''
+```
