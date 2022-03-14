@@ -38,6 +38,8 @@ bundle config set --local path 'vendor/bundle'
 
 Then you can install the bundle by running this command in the main repo folder:
 
-```bundle install```
+```
+bundle install
+```
 
-Finally, run ```bundle exec jekyll serve``` to serve the site at http://127.0.0.1:4000
+Finally, run ```bundle exec jekyll serve --b ''``` to serve the site at http://127.0.0.1:4000
