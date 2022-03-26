@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include autodocs/modules/other/valuestream.md %}
+{% include other/valuestream.md %}

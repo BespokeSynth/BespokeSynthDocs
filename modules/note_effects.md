@@ -7,4 +7,4 @@ nav_order: 2
 has_toc: false
 ---
 
-{% include autodocs/modules/note_effects.md %}
+{% include note_effects.md %}

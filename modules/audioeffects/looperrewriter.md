@@ -5,4 +5,4 @@ parent: audio effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/audioeffects/looperrewriter.md %}
+{% include audioeffects/looperrewriter.md %}

@@ -5,4 +5,4 @@ parent: note effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/noteeffects/chorddisplayer.md %}
+{% include noteeffects/chorddisplayer.md %}

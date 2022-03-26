@@ -7,4 +7,4 @@ nav_order: 6
 has_toc: false
 ---
 
-{% include autodocs/modules/pulse.md %}
+{% include pulse.md %}

@@ -7,4 +7,4 @@ nav_order: 1
 has_toc: false
 ---
 
-{% include autodocs/modules/instruments.md %}
+{% include instruments.md %}

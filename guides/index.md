@@ -1,11 +1,11 @@
 ---
 layout: page
 title: guides
-has_children: true
 nav_order: 3
+has_children: true
+has_toc: true
 ---
 
-# guides
-<br>
+# Guides
 
 Guides, examples and use cases.

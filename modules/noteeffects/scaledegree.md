@@ -5,4 +5,4 @@ parent: note effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/noteeffects/scaledegree.md %}
+{% include noteeffects/scaledegree.md %}

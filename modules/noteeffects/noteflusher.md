@@ -5,4 +5,4 @@ parent: note effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/noteeffects/noteflusher.md %}
+{% include noteeffects/noteflusher.md %}

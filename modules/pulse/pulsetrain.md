@@ -5,4 +5,4 @@ parent: pulse
 grand_parent: modules
 ---
 
-{% include autodocs/modules/pulse/pulsetrain.md %}
+{% include pulse/pulsetrain.md %}

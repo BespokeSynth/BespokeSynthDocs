@@ -5,4 +5,4 @@ parent: audio effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/audioeffects/freqdelay.md %}
+{% include audioeffects/freqdelay.md %}

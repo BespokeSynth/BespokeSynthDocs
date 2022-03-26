@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include autodocs/modules/unknown/multitrackrecordertrack.md %}
+{% include unknown/multitrackrecordertrack.md %}

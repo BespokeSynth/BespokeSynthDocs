@@ -5,4 +5,4 @@ parent: unknown
 grand_parent: modules
 ---
 
-{% include autodocs/modules/unknown/pitchchorus.md %}
+{% include unknown/pitchchorus.md %}
