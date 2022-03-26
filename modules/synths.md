@@ -7,4 +7,4 @@ nav_order: 3
 has_toc: false
 ---
 
-{% include autodocs/modules/synths.md %}
+{% include synths.md %}

@@ -15,7 +15,7 @@ def getAcceptsInputsString(moduleInfo):
       ret = "accepts: "+ret
    return ret
 
-documentation = json.load(open("../module_documentation.json","r"))
+documentation = json.load(open("module_documentation.json","r"))
 
 moduleTypes = ["pulse"]
 modulesByType = {}
@@ -27,7 +27,7 @@ for moduleName in documentation.keys():
    modulesByType[module["type"]].append(moduleName)
    longestColumn = max(longestColumn, len(modulesByType[module["type"]]))
 
-html = open("../../_includes/autodocs/modules/pulse.md", "w")
+html = open("../_includes/pulse.md", "w")
 
 for moduleType in moduleTypes:
    html.write('''

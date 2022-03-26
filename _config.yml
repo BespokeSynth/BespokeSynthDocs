@@ -1,9 +1,7 @@
 title: Bespoke Synth User Docs
-description: >- # this means to ignore newlines until "baseurl:"
-  Community-built documentation for bespoke synth.
+description: Community-built documentation for bespoke synth.
 baseurl: "/BespokeSynthDocs"
 url: "https://bespokesynth.github.io"
-# Build settings
 remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
 aux_links:
@@ -11,3 +9,17 @@ aux_links:
     - "https://www.bespokesynth.com/"
   "github.com":
     - "https://github.com/BespokeSynth/BespokeSynth"
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/
+  - backup/

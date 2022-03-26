@@ -7,4 +7,4 @@ nav_order: 5
 has_toc: false
 ---
 
-{% include autodocs/modules/modulators.md %}
+{% include modulators.md %}

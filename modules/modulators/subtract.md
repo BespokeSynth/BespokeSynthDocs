@@ -5,4 +5,4 @@ parent: modulators
 grand_parent: modules
 ---
 
-{% include autodocs/modules/modulators/subtract.md %}
+{% include modulators/subtract.md %}

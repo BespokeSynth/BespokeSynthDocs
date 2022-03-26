@@ -7,4 +7,4 @@ nav_order: 8
 has_toc: false
 ---
 
-{% include autodocs/modules/other.md %}
+{% include other.md %}

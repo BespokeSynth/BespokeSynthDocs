@@ -7,4 +7,4 @@ nav_order: 7
 has_toc: false
 ---
 
-{% include autodocs/modules/effect_chain.md %}
+{% include effect_chain.md %}

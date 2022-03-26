@@ -15,9 +15,9 @@ def getAcceptsInputsString(moduleInfo):
       ret = "accepts: "+ret
    return ret
 
-documentation = json.load(open("../module_documentation.json","r"))
+documentation = json.load(open("module_documentation.json","r"))
 
-moduleTypes = ["other"]
+moduleTypes = ["synths"]
 modulesByType = {}
 longestColumn = 0
 for moduleName in documentation.keys():
@@ -27,7 +27,7 @@ for moduleName in documentation.keys():
    modulesByType[module["type"]].append(moduleName)
    longestColumn = max(longestColumn, len(modulesByType[module["type"]]))
 
-html = open("../../_includes/autodocs/modules/other.md", "w")
+html = open("../_includes/synths.md", "w")
 
 for moduleType in moduleTypes:
    html.write('''

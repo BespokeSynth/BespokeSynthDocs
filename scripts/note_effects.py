@@ -15,9 +15,9 @@ def getAcceptsInputsString(moduleInfo):
       ret = "accepts: "+ret
    return ret
 
-documentation = json.load(open("../module_documentation.json","r"))
+documentation = json.load(open("module_documentation.json","r"))
 
-moduleTypes = ["instruments","note effects","synths","audio effects","modulators","pulse","effect chain","other"]
+moduleTypes = ["note effects"]
 modulesByType = {}
 longestColumn = 0
 for moduleName in documentation.keys():
@@ -27,11 +27,11 @@ for moduleName in documentation.keys():
    modulesByType[module["type"]].append(moduleName)
    longestColumn = max(longestColumn, len(modulesByType[module["type"]]))
 
-html = open("../../_includes/autodocs/modules.md", "w")
+html = open("../_includes/note_effects.md", "w")
 
 for moduleType in moduleTypes:
    html.write('''
-## '''+moduleType+'''
+# '''+moduleType+'''
          ''')
    for module in modulesByType[moduleType]:
       moduleInfo = documentation[module]
@@ -60,9 +60,9 @@ moduleInfo["description"]+"<br><br>"
                    ''')
       acceptsInputs = getAcceptsInputsString(moduleInfo)
       if acceptsInputs != "":
-         html.write(
-"<br>"+acceptsInputs+"<br>"
-             )
+         html.write('''
+<br>'''+acceptsInputs+'''<br>
+             ''')
       html.write('''
 <br><br><br><br></div>
 ''')

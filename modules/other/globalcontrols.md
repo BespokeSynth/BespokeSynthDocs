@@ -5,4 +5,4 @@ parent: other
 grand_parent: modules
 ---
 
-{% include autodocs/modules/other/globalcontrols.md %}
+{% include other/globalcontrols.md %}

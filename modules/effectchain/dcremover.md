@@ -5,4 +5,4 @@ parent: effect chain
 grand_parent: modules
 ---
 
-{% include autodocs/modules/effectchain/dcremover.md %}
+{% include effectchain/dcremover.md %}

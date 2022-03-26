@@ -15,7 +15,7 @@ def getAcceptsInputsString(moduleInfo):
       ret = "accepts: "+ret
    return ret
 
-documentation = json.load(open("../module_documentation.json","r"))
+documentation = json.load(open("module_documentation.json","r"))
 
 moduleTypes = ["instruments","note effects","synths","audio effects","modulators","pulse","effect chain","other"]
 modulesByType = {}
@@ -26,31 +26,16 @@ for moduleName in documentation.keys():
       modulesByType[module["type"]] = []
    modulesByType[module["type"]].append(moduleName)
    longestColumn = max(longestColumn, len(modulesByType[module["type"]]))
+   module["typetitle"] = module["type"]
    module["type"] = module["type"].replace(' ', '')
-   md = open(f'../../_includes/autodocs/modules/{module["type"]}/{moduleName}.md', 'w')
-   md.write('''
-<a name='''f'{moduleName}''''></a><br>''')
-   md.write('''
-# <b>'''f'{moduleName}''''</b>
-<img src="../images/'''f'{moduleName}''''.png"><br>
-<div style="display:inline-block;margin-left:50px;">
+   md = open(f'../modules/{module["type"]}/{moduleName}.md', 'w')
+   md.write('''---
+layout: page
+title: '''f'{moduleName}''''
+parent: '''f'{module["typetitle"]}''''
+grand_parent: modules
+---
 ''')
-
-   moduleInfo = documentation[moduleName]
-   if "description" in moduleInfo:
-      md.write(
-moduleInfo["description"]+"<br/><br/>"
-)
-
-   if "controls" in moduleInfo:
-         for control in moduleInfo["controls"].keys():
-            tooltip = moduleInfo["controls"][control]
-            if tooltip != "" and tooltip != "[todo]" and tooltip != "[none]":
-               md.write('''
-<b>'''+control+'''</b>: '''+tooltip+'''<br>
-''')
-   acceptsInputs = getAcceptsInputsString(moduleInfo)
-   if acceptsInputs != "":
-      md.write('''
-<br>'''+acceptsInputs+'''<br></div>
+   md.write('''
+{% include '''f'{module["type"]}/{moduleName}.md'''' %}
 ''')

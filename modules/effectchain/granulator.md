@@ -5,4 +5,4 @@ parent: effect chain
 grand_parent: modules
 ---
 
-{% include autodocs/modules/effectchain/granulator.md %}
+{% include effectchain/granulator.md %}

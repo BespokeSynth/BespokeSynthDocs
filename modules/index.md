@@ -1,11 +1,11 @@
 ---
 layout: page
 title: modules
+nav_order: 4
 has_children: true
-nav_order: 2
 has_toc: false
 ---
 
 # modules
 
-{% include autodocs/modules.md %}
+{% include modules.md %}

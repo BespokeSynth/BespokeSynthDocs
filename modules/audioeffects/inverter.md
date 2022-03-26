@@ -5,4 +5,4 @@ parent: audio effects
 grand_parent: modules
 ---
 
-{% include autodocs/modules/audioeffects/inverter.md %}
+{% include audioeffects/inverter.md %}
