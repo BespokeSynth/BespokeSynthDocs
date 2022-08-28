@@ -10,16 +10,8 @@ aux_links:
   "github.com":
     - "https://github.com/BespokeSynth/BespokeSynth"
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
   - scripts/
-  - backup/
+
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
