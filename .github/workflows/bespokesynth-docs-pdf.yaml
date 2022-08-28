@@ -1,0 +1,39 @@
+name: BespokeSynth Docs PDF
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 5
+
+      - name: Build PDF
+        run: >
+          wget -q https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-1-amd64.deb;
+          sudo apt install ./pandoc-2.19.2-1-amd64.deb;
+          wget -q https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb;
+          sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb;
+          cd _includes;
+          cat margin.md help.md modules.md > ../modules/pdf.md;
+          cd ../modules/;
+          pandoc -f gfm -t html pdf.md -o ../BespokeSynthDocs.pdf
+          --css ../assets/css/pdf.css -V title:""
+          --pdf-engine-opt="--disable-smart-shrinking"
+          --pdf-engine-opt="--zoom" --pdf-engine-opt="1"
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release edit bespokesynth-docs -n "PDF of the [BespokeSynth Docs](https://bespokesynth.github.io/BespokeSynthDocs/)"
+          gh release upload bespokesynth-docs ./BespokeSynthDocs.pdf --clobber
