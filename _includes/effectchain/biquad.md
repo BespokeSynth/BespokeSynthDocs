@@ -10,4 +10,4 @@ filter using biquad formula<br/><br/>
 
 <b>Q</b>: resonance<br>
 
-<b>type</b>: filter type<br>
+<b>type</b>: filter type (low-pass, high-pass, band-pass, peak, all-pass)<br>
