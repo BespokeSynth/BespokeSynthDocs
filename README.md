@@ -1,8 +1,8 @@
 # [Community-built wiki](https://github.com/BespokeSynth/BespokeSynthDocs/wiki) for [Bespoke Synth](https://www.bespokesynth.com/)
 
-### [YouTube: Basic Usage Walkthrough](https://www.youtube.com/watch?v=SYBc8X2IxqM)
-
 ### [Offical Documentation](https://www.bespokesynth.com/docs)
+
+### [YouTube: Basic Usage Walkthrough](https://www.youtube.com/watch?v=SYBc8X2IxqM)
 
 <a href="images/bespoke_quick_reference.png"><img src="images/bespoke_quick_reference.png"></a>
 
