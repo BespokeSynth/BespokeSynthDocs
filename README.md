@@ -10,4 +10,4 @@ Sign up [here](http://bespokesynth.substack.com) to receive an email for new rel
 
 Join the [Bespoke Discord](https://discord.gg/YdTMkvvpZZ) for support and to discuss with the community.
 
-<a href="images/bespoke_quick_reference.png"><img src="images/bespoke_quick_reference.png"></a>
+![BespokeSynth Quick Reference](https://github.com/BespokeSynth/BespokeSynthDocs/blob/main/images/bespoke_quick_reference.png)
