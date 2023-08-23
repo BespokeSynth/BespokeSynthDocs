@@ -4,7 +4,7 @@
 
 ### [Offical Documentation](https://www.bespokesynth.com/docs)
 
-<a href="bespoke_quick_reference.png"><img src="bespoke_quick_reference.png"></a>
+<a href="images/bespoke_quick_reference.png"><img src="images/bespoke_quick_reference.png"></a>
 
 You can find the most recent builds for Mac/Windows/Linux at [bespokesynth.com](https://www.bespokesynth.com), or in the [Releases](https://github.com/BespokeSynth/BespokeSynth/releases) section on GitHub.
 
