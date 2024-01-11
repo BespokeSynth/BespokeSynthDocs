@@ -6,6 +6,8 @@ This document describes the specific calls you get from bespoke and can make int
 If you have jedi installed, python autocomplete is supported.
 The typical way to install jedi on your system is to enter 'pip install jedi' into your system's terminal.
 
+(Note from the editor: If you would like to download this file, be mindful that "oscillator~pw" under m.set_connection has a backslash in it. This is to escape the character in markdown. Omit it when using it in your script.)
+
 # script module inputs:
 
 - on_pulse(): called by pulse input
@@ -142,7 +144,7 @@ The typical way to install jedi on your system is to enter 'pip install jedi' in
 - instance:
    - m.set_connection(messageType, control, controlPath, controlType, value, channel, page, midi_off, midi_on, scale, blink, increment, twoway, feedbackControl, isPageless)
       - optional: controlType = Default, value = 0, channel = -1, page=0, midi_off=0, midi_on = 127, scale = false, blink = false, increment = 0, twoway = true, feedbackControl = -1, isPageless = false
-      - example: m.set_connection(m.Control, 32, "oscillator~pw"), or m.set_connection(m.Note, 10, "oscillator~osc", m.SetValue, 2)
+      - example: m.set_connection(m.Control, 32, "oscillator\~pw"), or m.set_connection(m.Note, 10, "oscillator~osc", m.SetValue, 2)
    - m.send_note(pitch, velocity, forceNoteOn, channel, page)
       - optional: forceNoteOn = false, channel = -1, page = 0
    - m.send_cc(ctl, value, channel, page)
