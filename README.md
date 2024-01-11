@@ -4,6 +4,8 @@
 
 ### [YouTube: Basic Usage Walkthrough](https://www.youtube.com/watch?v=SYBc8X2IxqM)
 
+### [Scripting Guide](https://github.com/BespokeSynth/BespokeSynthDocs/blob/main/Scripting%20Reference.md)
+
 You can find the most recent builds for Mac/Windows/Linux at [bespokesynth.com](https://www.bespokesynth.com), or in the [Releases](https://github.com/BespokeSynth/BespokeSynth/releases) section on GitHub.
 
 Sign up [here](http://bespokesynth.substack.com) to receive an email for new releases.
