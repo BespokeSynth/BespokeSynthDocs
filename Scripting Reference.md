@@ -1,6 +1,6 @@
 # Scripting Reference
 
-The script module takes python code as input. any python code and imports should work fine.
+The script module takes python code as input. Any python code and imports should work fine.
 This document describes the specific calls you get from bespoke and can make into bespoke.
 
 If you have jedi installed, python autocomplete is supported.
