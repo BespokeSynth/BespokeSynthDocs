@@ -1,0 +1,237 @@
+# Scripting Reference
+
+The script module takes python code as input. Any python code and imports should work fine.
+This document describes the specific calls you get from bespoke and can make into bespoke.
+
+If you have jedi installed, python autocomplete is supported.
+The typical way to install jedi on your system is to enter 'pip install jedi' into your system's terminal.
+
+(Note from the editor: If you would like to download this file, be mindful that "oscillator~pw" under m.set_connection has a backslash in it. This is to escape the character in markdown. Omit it when using it in your script.)
+
+# script module inputs:
+
+- on_pulse(): called by pulse input
+- on_note(pitch, velocity): called by note input
+- on_grid_button(col, row, velocity): called by grid input
+- on_osc(message): called by external osc source, after registering with me.connect_osc_input(port)
+- on_midi(messageType, control, value, channel): called by midicontroller, after registering with add_script_listener(me.me())
+
+
+# globals:
+
+- bespoke.get_measure_time()
+- bespoke.get_measure()
+- bespoke.reset_transport()
+- bespoke.get_step(subdivision)
+- bespoke.count_per_measure(subdivision)
+- bespoke.time_until_subdivision(subdivision)
+   - example: me.schedule_call(bespoke.time_until_subdivision(1), "on_downbeat()")
+- bespoke.get_time_sig_ratio()
+- bespoke.get_root()
+- bespoke.get_scale()
+- bespoke.get_scale_range(octave, count)
+- bespoke.tone_to_pitch(index)
+- bespoke.name_to_pitch(noteName)
+- bespoke.pitch_to_name(pitch)
+- bespoke.pitch_to_freq(pitch)
+- bespoke.get_tempo()
+- bespoke.set_background_text(str, size, xPos, yPos, red, green, blue)
+   - optional: size=50, xPos = 150, yPos = 250, red = 1, green = 1, blue = 1
+- bespoke.random(seed, index)
+- bespoke.get_modules()
+
+
+# script-relative:
+
+- me.play_note(pitch, velocity, length, pan, output_index)
+   - optional: length=1.0/16.0, pan = 0, output_index = 0
+   - example: me.play_note(60, 127, 1.0/8)
+- me.schedule_note(delay, pitch, velocity, length, pan, output_index)
+   - optional: length=1.0/16.0, pan = 0, output_index = 0
+   - example: me.schedule_note(1.0/4, 60, 127, 1.0/8)
+- me.schedule_note_msg(delay, pitch, velocity, pan, output_index)
+   - optional: pan = 0, output_index = 0
+- me.schedule_call(delay, method)
+   - example: me.schedule_call(1.0/4, "dotask()")
+- me.note_msg(pitch, velocity, pan, output_index)
+   - optional: pan = 0, output_index = 0
+- me.set(path, value)
+   - example: me.set("oscillator~pw", .2)
+- me.schedule_set(delay, path, value)
+- me.get(path)
+   - example: pulsewidth = me.get("oscillator~pulsewidth")
+- me.adjust(path, amount)
+- me.highlight_line(lineNum, scriptModuleIndex)
+- me.output(obj)
+   - example: me.output("hello world!")
+- me.me()
+- me.stop()
+- me.get_caller()
+   - example: me.get_caller().play_note(60,127)
+- me.set_num_note_outputs(num)
+- me.connect_osc_input(port)
+- me.send_cc(control, value, output_index)
+   - optional: output_index = 0
+
+
+# import notesequencer
+
+- static:
+   - notesequencer.get(path)
+- instance:
+   - n.set_step(step, row, velocity, length)
+      - optional: velocity = 127, length = 1.0
+   - n.set_pitch(step, pitch, velocity, length)
+      - optional: velocity = 127, length = 1.0
+
+
+# import drumsequencer
+
+- static:
+   - drumsequencer.get(path)
+- instance:
+   - d.set(step, pitch, velocity)
+   - d.get(step, pitch)
+
+
+# import grid
+
+- static:
+   - grid.get(path)
+      - example: g = grid.get("grid") #assuming there's a grid called "grid" somewhere in the layout
+- instance:
+   - g.set(col, row, value)
+   - g.get(col, row)
+   - g.set_grid(cols, rows)
+   - g.set_label(row, label)
+   - g.set_color(colorIndex, r, g, b)
+   - g.highlight_cell(col, row, delay, duration, colorIndex)
+      - optional: colorIndex=1
+   - g.set_division(division)
+   - g.set_momentary(momentary)
+   - g.set_cell_color(col, row, colorIndex)
+   - g.get_cell_color(col, row)
+   - g.add_listener(script)
+   - g.clear()
+
+
+# import notecanvas
+
+- static:
+   - notecanvas.get(path)
+- instance:
+   - n.add_note(measurePos, pitch, velocity, length)
+   - n.clear()
+   - n.fit()
+
+
+# import sampleplayer
+
+- static:
+   - sampleplayer.get(path)
+- instance:
+   - s.set_cue_point(pitch, startSeconds, lengthSeconds, speed)
+   - s.fill(data)
+   - s.play_cue(cue, speedMult, startOffsetSeconds)
+      - optional: speedMult = 1, startOffsetSeconds = 0
+   - s.get_length_seconds()
+
+
+# import midicontroller
+
+- static:
+   - midicontroller.get(path)
+- instance:
+   - m.set_connection(messageType, control, controlPath, controlType, value, channel, page, midi_off, midi_on, scale, blink, increment, twoway, feedbackControl, isPageless)
+      - optional: controlType = Default, value = 0, channel = -1, page=0, midi_off=0, midi_on = 127, scale = false, blink = false, increment = 0, twoway = true, feedbackControl = -1, isPageless = false
+      - example: m.set_connection(m.Control, 32, "oscillator\~pw"), or m.set_connection(m.Note, 10, "oscillator~osc", m.SetValue, 2)
+   - m.send_note(pitch, velocity, forceNoteOn, channel, page)
+      - optional: forceNoteOn = false, channel = -1, page = 0
+   - m.send_cc(ctl, value, channel, page)
+      - optional: channel = -1, page = 0
+   - m.send_program_change(program, channel, page)
+      - optional: channel = -1, page = 0
+   - m.send_pitchbend(bend, channel, page)
+      - optional: channel = -1, page = 0
+   - m.send_data(a, b, c, page)
+      - optional: page = 0
+   - m.send_sysex(data, page)
+      - optional: page = 0
+      - description: Sends a system exclusive message. The given data will be wrapped with header and tail bytes of 0xf0 and 0xf7. The example enables Programmer-Mode on a Launchpad X. 
+      - example: m.send_sysex(bytes([0, 32, 41, 2, 12, 14, 1]) 
+   - m.add_script_listener(script)
+   - m.resync_controller_state()
+
+
+# import linnstrument
+
+- static:
+   - linnstrument.get(path)
+- instance:
+   - l.set_color(x, y, color)
+
+
+# import osccontroller
+
+- static:
+   - osccontroller.get(path)
+- instance:
+   - o.add_control(address, isFloat)
+
+# import oscoutput
+
+- static:
+   - oscoutput.get(path)
+- instance:
+   - o.send_float(address, val)
+   - o.send_int(address, val)
+   - o.send_string(address, val)
+
+
+# import envelope
+
+- static:
+   - envelope.get(path)
+- instance:
+   - e.start(stages)
+   - e.schedule(delay, stages)
+
+
+# import drumplayer
+
+- static:
+   - drumplayer.get(path)
+- instance:
+   - d.import_sampleplayer_cue(samplePlayer, srcCueIndex, destHitIndex)
+
+
+# import vstplugin
+
+- static:
+   - vstplugin.get(path)
+- instance:
+   - v.send_cc(ctl, value, channel)
+   - v.send_program_change(program, channel)
+   - v.send_data(a, b, c)
+
+
+# import module
+
+- static:
+   - module.get(path)
+   - module.create(moduleType, x, y)
+- instance:
+   - m.set_position(x, y)
+   - m.get_position_x()
+   - m.get_position_y()
+   - m.get_width()
+   - m.get_height()
+   - m.set_target(target)
+   - m.set_target(targetPath)
+   - m.get_target()
+   - m.get_targets()
+   - m.set_name(name)
+   - m.delete()
+   - m.set(path, value)
+   - m.get(path)
+   - m.adjust(path, amount)
